@@ -1,4 +1,4 @@
-/* 🌿 Student Management System – Elegant Nature Theme */
+/* 🌿 Student Management System – Elegant Nature Theme (Updated) */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -14,23 +14,35 @@ body {
   justify-content: center;
 }
 
-/* Soft overlay for blur + readability */
+/* 🔹 Reduced blur for a clearer leaf background */
 body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(4px); /* was 8px — reduced */
   z-index: -1;
 }
 
-.container, .form-container, .list-container {
+.container, .list-container {
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 16px;
+  border-radius: 6px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   width: 90%;
   max-width: 850px;
   padding: 40px;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+/* 🔹 Smaller and more compact Add Student form */
+.form-container {
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 90%;
+  max-width: 500px; /* smaller width */
+  padding: 30px 35px;
   text-align: center;
   animation: fadeIn 0.8s ease;
 }
@@ -48,7 +60,7 @@ h1, h2 {
 
 p {
   color: #444;
-  font-size: 1.1em;
+  font-size: 1.05em;
   margin-bottom: 20px;
 }
 
@@ -58,7 +70,7 @@ p {
   color: #fff;
   padding: 12px 25px;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 3px;
   font-weight: 600;
   transition: 0.3s ease;
   box-shadow: 0 4px 10px rgba(59, 165, 92, 0.3);
@@ -73,9 +85,11 @@ p {
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 label {
@@ -84,9 +98,9 @@ label {
 }
 
 input {
-  padding: 10px;
+  padding: 9px;
   border: 1.5px solid #b5d3b8;
-  border-radius: 8px;
+  border-radius: 3px;
   font-size: 1em;
   background: rgba(255, 255, 255, 0.9);
   transition: 0.3s;
@@ -101,12 +115,13 @@ input:focus {
 button {
   background: linear-gradient(90deg, #3ba55c, #6fd685);
   color: #fff;
-  padding: 12px;
+  padding: 11px;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+  margin: 10px 60px 0px 60px;
 }
 
 button:hover {
