@@ -165,3 +165,84 @@ tr:hover {
 .grade.c { color: #f9a825; }
 .grade.d { color: #fb8c00; }
 .grade.f { color: #e53935; }
+
+
+
+
+
+
+
+
+
+
+
+/* 📱 Responsive Design */
+
+/* Tablets and small laptops */
+@media (max-width: 768px) {
+  .container,
+  .list-container,
+  .form-container {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.6em;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  form {
+    padding: 0 10px;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  input,
+  button {
+    width: 100%;
+    font-size: 0.95em;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .container,
+  .list-container,
+  .form-container {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 8px;
+  }
+
+  h1, h2 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 0.95em;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.85em;
+  }
+
+  input,
+  button,
+  .btn {
+    font-size: 0.9em;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
