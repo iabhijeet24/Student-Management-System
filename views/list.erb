@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Students</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="list-container">
+    <h2>📋 Student Records</h2>
+    <% if STUDENTS.empty? %>
+      <p>No students added yet.</p>
+    <% else %>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Course</th>
+          <th>Marks</th>
+          <th>Grade</th>
+        </tr>
+        <% STUDENTS.each do |s| %>
+          <tr>
+            <td><%= s[:name] %></td>
+            <td><%= s[:age] %></td>
+            <td><%= s[:course] %></td>
+            <td><%= s[:marks] %></td>
+            <td class="grade <%= s[:grade].downcase %>"><%= s[:grade] %></td>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
+    <a href="/" class="back">⬅ Back</a>
+  </div>
+</body>
+</html>
