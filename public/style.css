@@ -14,19 +14,17 @@ body {
   justify-content: center;
 }
 
-/* 🔹 Reduced blur for a clearer leaf background */
+
 body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(4px); /* was 8px — reduced */
   z-index: -1;
 }
 
 .container, .list-container {
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   width: 90%;
   max-width: 850px;
@@ -35,7 +33,6 @@ body::before {
   animation: fadeIn 0.8s ease;
 }
 
-/* 🔹 Smaller and more compact Add Student form */
 .form-container {
   background: rgba(255, 255, 255, 0.88);
   border-radius: 6px;
